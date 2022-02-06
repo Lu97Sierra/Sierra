@@ -1,6 +1,6 @@
 ## Tarea_1
 ### Un poco sobre mi...
-* Me llamo Luis Gustavo Sierra Ontiveros, soy alumno del Tecnologico y cursando actualmente en 8vo semestre 
+* Me llamo Luis Gustavo Sierra Ontiveros, soy alumno del Tecnologico y cursando actualmente en 8vo semestre con un numero de control de 18100233
 - Las base de datos que domino es solamente Eclipse, los lenguajes de programacion que sé son los de C, C++ y C#
 ![Imagen](http://webmasters.astalaweb.com/images2/Logo_C.jpg)
 
