@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lange="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Flexbox</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="widht=device-widht, initial scale=1.0"> 
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="contenedor">
+            <div id="caja1" class="caja">Propiedad</div>
+            <div id="caja2" class="caja">Descripcion</div>
+            <div id="caja3" class="caja">Valores</div>
+            <div id="caja4" class="caja">flex-direction</div>
+            <div id="caja5" class="caja">Esta propiedad nos sirve para definir la dirección del flujo de colocación de los elementos.</div>
+            <div id="caja6" class="caja">row (valor predeterminado): Indica que los elementos se colocan en una fila, uno al lado del otro, de izquierda a derecha.
+                row-reverse: se colocan en una fila, pero con orden de derecha a izquierda.
+                column: se colocan uno debajo del otro, en orden los primeros arriba.
+                column-reverse: se colocan en una columna, pero los primeros aparecerán abajo.</div>
+            <div id="caja7" class="caja">flex-wrap</div>
+            <div id="caja8" class="caja">Sirve para indicar si queremos que haya saltos de línea en los elementos que se colocan en el contenedor, si es que éstos no caben en el espacio disponible.</div>
+            <div id="caja9" class="caja">nowrap (predeterminado): hace que nunca se produzcan saltos de línea.
+                wrap: hace que si no caben, entonces se coloquen en la siguiente línea.
+                wrap-reverse: El salto de línea se producirá al contrario, o sea, hacia arriba.</div>
+            <div id="caja10" class="caja">flex-flow</div>
+            <div id="caja11" class="caja">Esta propiedad no aporta nada nuevo, pues simplemente es un atajo para escribir de 1 sola vez flex-direction y flex-wrap. El valor predeterminado es "row nowrap"</div>
+            <div id="caja12" class="caja">row nowrap</div>
+            <div id="caja13" class="caja">justify-content</div>
+            <div id="caja14" class="caja">Esta propiedad es muy útil para indicar cómo se van a colocar los justificados y márgenes de los ítems. Puedes indicar que vayan a justificados al inicio del eje o al final del eje o que a la hora de distribuirse se coloque un espacio entre ellos o un espacio entre ellos y los bordes.</div>
+            <div id="caja15" class="caja">flex-start: Añade los elementos a partir del inicio del eje principal.
+                flex-end: Añade los elementos a partir del final del eje principal.
+                center: los elementos se centran en el espacio del contenedor, siempre con respecto al eje principal.
+                space-between: hace que los elementos se distribuyan con un espacio proporcional entre ellos, siendo que los ítem de los extremos se sitúan en el borde del contenedor.
+                space-around: es parecido a space-between en el sentido de dejar un espaciado proporcional, sin embargo, en esta ocasión se deja también espacio entre el borde del contenedor y los ítem de los extremos.</div>
+            <div id="caja16" class="caja">align-items</div>
+            <div id="caja17" class="caja">Esta propiedad es muy similar a la propiedad anterior, justify-content, solo que ahora estamos alineando con respecto al eje secundario y no el principal.</div>
+            <div id="caja18" class="caja">flex-start: indica que se posicionarán al comienzo del eje secundario.
+                flex-end: se posicionarán al final del eje secundario.
+                center: se posicionarán en el centro del eje secundario.
+                stretch: ocuparán el tamaño total del eje secundario (a no ser que hayamos marcado que esos elementos tengan un tamaño diferente).
+                baseline: para el posicionamiento de los elementos se tendrá en cuenta el texto que hay escrito dentro.</div>
+            <div id="caja19" class="caja">align-content</div>
+            <div id="caja20" class="caja">Esta propiedad sólo aplica cuando dispones de varias líneas de elementos en el contenedor flexbox. El efecto que conseguiremos será una alineación y separación de las filas en el eje secundario.</div>
+            <div id="caja21" class="caja">flex-start: indica que las filas se colocarán todas pegadas entre sí (obviamente no aparecerán exactamente pegadas si le hemos colocado un margin), desde el inicio del eje secundario.
+                flex-end: las filas se colocarán pegadas entre sí, pero esta vez pegadas al final del eje secundario.
+                center: se posicionarán en el centro del eje secundario, pegadas entre sí.
+                stretch: Sus dimensiones crecerán para ocupar todo el espacio disponible (a no ser que se haya colocado una dimensión diferente en los elementos).
+                space-between: indica que las filas se separarán entre sí, dejando un espacio proporcional entre ellas.
+                space-around: indica que las filas se separarán, dejando un espacio entre ellas proporcional, también con el borde.</div>
+
+
+            
+        </div>
+    </body>
+</html>
