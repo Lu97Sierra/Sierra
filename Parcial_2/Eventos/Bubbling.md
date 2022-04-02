@@ -25,7 +25,3 @@
 - Definición de parámetros: Evento --- (nombre del evento, como onclick, con on), escucha --- función de escucha del evento.
 
 - AttachEvent se utiliza principalmente en los navegadores IE, y solo es compatible con IE10 y versiones anteriores. IE11 ha abandonado este método (Microsoft sigue siendo bastante interesante y se está acercando lentamente al estándar).
-
- 
-
-- Hablando de la definición de la canasta, se utilizarán los siguientes dos métodos para explicar las diferencias de comportamiento específicas entre la captura de eventos y el evento burbujeando a través de las castañas.
