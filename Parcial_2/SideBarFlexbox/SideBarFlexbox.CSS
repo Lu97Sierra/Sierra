@@ -21,7 +21,7 @@
     background-color:antiquewhite;
     width: 200px;
     height: 100%;
-    overflow: auto;
+    overflow: 0.2em;;
   }
   
   
@@ -100,3 +100,4 @@
       text-align: center;
     }
   }
+  

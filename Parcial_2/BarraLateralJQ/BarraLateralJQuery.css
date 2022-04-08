@@ -1,46 +1,130 @@
-* {
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  #sidebar {
-    position: fixed;
-    width: 200px;
-    height: 100%;
-    background: #151719;
-    left: -200px;
-    transition: all 500ms linear;
-  }
-  
-  #sidebar.active {
-    left: 0px;
-  }
-  
-  #sidebar ul li {
-    color: rgba(230, 230, 230, .9);
-    list-style: none;
-    padding: 15px 10px;
-    border-bottom: 1px solid rgba(100, 100, 100, .3);
-    text-align: center;
-  }
-  
-  .logo {
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto; 
-  }
-  
-  #sidebar .toggle-btn {
-    position: absolute;
-    left: 230px;
-    top: 20px;
-    cursor: pointer;
-  }
-  
-  #sidebar .toggle-btn span {
-    display: block;
-    width: 40px;
-    text-align: center;
-    font-size: 30px;
-    border: 3px solid #000;
-  }
+
+body,html
+{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.barralateral
+{
+  float: left;
+  width: 200px;
+  margin-left: -200px;
+  height: 100%;
+  background: goldenrod;
+  overflow: hidden;
+  transition: .6s all;
+}
+
+.barralateral-open
+{
+  margin-left: 0;
+}
+
+.barralateral ul
+{
+  margin: 0;
+  padding: 0;
+}
+
+.barralateral ul li
+{
+  list-style: none;
+}
+
+.barralateral ul li a
+{
+  text-decoration:underline;
+  color: #313131;
+  height: 30px;
+  width: 100%;
+  font-size: 20px;
+  line-height: 100px;
+  display: block;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.barralateral ul li a i
+{
+  border-radius: 6px;
+  padding: 8px;
+  transition: .5s ease-in-out;
+}
+
+.barralateral ul li a i:hover
+{
+  background: #fff;
+  border: 1px solid #fff;
+}
+
+
+.boton
+{
+  float: left;
+  height: 30px;
+  width: 30px;
+  padding: 6px;
+  background: #fff;
+  border: 1px solid #fa8231;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.boton .bar1, .boton .bar2, .boton .bar3
+{
+  height: 3px;
+  width: 100%;
+  display: block;
+  background: #000;
+}
+
+.close-boton
+{
+  top: 0;
+  right: 0;
+  height: 30px;
+  width: 30px;
+  padding: 6px;
+  background: #fff;
+  border: 1px solid #fa8231;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+
+.close-boton .bar1
+{
+  transform: rotate(-130deg);
+  height: 3px;
+  width: 70%;
+  display: block;
+  background: #000;
+  position: absolute;
+}
+
+.close-boton .bar2
+{
+  display: none;
+}
+
+.close-boton .bar3
+{
+  transform: rotateZ(130deg);
+  height: 3px;
+  width: 70%;
+  display: block;
+  background: #000;
+  position: absolute;
+}
