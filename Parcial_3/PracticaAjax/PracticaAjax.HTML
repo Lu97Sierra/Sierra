@@ -12,7 +12,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
-      <p class="header"><h1>Encuesta Medio Ambiente</h1></p>
+      <p class="header"><h1 id="idHeader">Encuesta Medio Ambiente</h1></p>
       <body background="FondoPagina/e0629d4e6bac58987e105b3cf7c5f35d.jpg"></body>      
     <div class="container">
     <form class="form">
@@ -63,7 +63,8 @@
       <button id="botonAlerta" type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal">Guardar</button>
       <button type="reset" class="btn btn-default">Reset</button>
       <button id="Guardar" type="button" class="btn btn-primary">Guardar formulario</button>    
-      <button id="Modificar" type="button" class="btn btn-primary">Modificar Header</button>  
+      <button id="botonAjax" type="button" class="btn btn-primary">Modificar Header</button>  
+      <script src="PracticaAjax.js"></script>
 </form>
           <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
