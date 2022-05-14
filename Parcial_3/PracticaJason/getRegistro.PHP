@@ -8,4 +8,7 @@ $registro['telCliente'] ='867 163 123';
 $registro['ciudad'] ='Nuevo Laredo';
 $registro['estado'] ='Tamaulipas';
 $registro['pais'] ='Mexico';
+
+$registroJson = json_encode($registro);
+echo $registroJson
 ?>
