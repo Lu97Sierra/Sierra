@@ -1,4 +1,4 @@
-$(Document).ready(function(){
+$(document).ready(function(){
     $('#botonAjax').click(function(){
         
 
@@ -30,6 +30,19 @@ $(Document).ready(function(){
             $('#idPregunta7').val(data.idPregunta7);
             $('#idPregunta8').val(data.idPregunta8);
 
-        })
+        },'json')
     });
+    
+    $(document).ready(function(){
+          $('#Guardar').click(function(){
+            swal({
+            title: 'SweetAlert',
+            text: 'Esto es un sweet alert',
+            html: '<p>MHola<strong>formato</strong>.</p>',
+            type: 'success',
+            timer: 3000,
+            });
+          });
+    });
+
 });
