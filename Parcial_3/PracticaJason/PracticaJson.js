@@ -17,19 +17,19 @@ $(Document).ready(function(){
             
            
     });
-    $('#btnJason').click(function() {
+    $('#btnJson').click(function() {
         $.post('getRegistro.PHP',{},function(data){
 
             console.log(data);
-            $('#idCliente').val(data.idCliente);
-            $('#nomCliente').val(data.nomCliente);
-            $('#hora').val(data.hora);
-            $('#dirCliente').val(data.dirCliente);
-            $('#telCliente').val(data.telCliente);
-            $('#ciudad').val(data.ciudad);
-            $('#estado').val(data.estado);
-            $('#pais').val(data.pais);
+            $('#idPregunta1').val(data.idPregunta1);
+            $('#idPregunta2').val(data.idPregunta2);
+            $('#idPregunta3').val(data.idPregunta3);
+            $('#idPregunta4').val(data.idPregunta4);
+            $('#idPregunta5').val(data.idPregunta5);
+            $('#idPregunta6').val(data.idPregunta6);
+            $('#idPregunta7').val(data.idPregunta7);
+            $('#idPregunta8').val(data.idPregunta8);
+
         })
-    }
-    );
+    });
 });
