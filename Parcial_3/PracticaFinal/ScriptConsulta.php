@@ -6,7 +6,7 @@ try{
     $query -> execute();
 
     while ($row = $query -> fetch()) {
-        echo    $row ['Pregunta0'].'-'.
+        echo    $row ['Nombre'].'-'.
                 $row ['Pregunta1'].'-'.
                 $row ['Pregunta2'].'-'.
                 $row ['Pregunta3'].'-'.
