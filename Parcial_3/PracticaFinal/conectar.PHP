@@ -29,7 +29,7 @@ try{
 $con -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 try {
-    $consultaSql = "select Nombre from preguntas where ID =".$id;
+    $consultaSql = "select * from preguntas where ID =".$id;
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
