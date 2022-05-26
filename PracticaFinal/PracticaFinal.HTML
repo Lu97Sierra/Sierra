@@ -16,13 +16,13 @@
 </head>
 <body>
       <p class="header"><center><h1 id="idHeader">Encuesta Medio Ambiente</h1></center></p>
-      <body background="e0629d4e6bac58987e105b3cf7c5f35d.jpg"></body>      
+      <body background="./Resources/e0629d4e6bac58987e105b3cf7c5f35d.jpg"></body>      
     <div class="container">
     <form class="form">
       <div class="row">
             <div class="form-group col-sm-12 col-md-4 col-lg-12">
                   <label for="Pregunta" class="control-label">Nombre</label>
-                  <input id="idPregunta0" type="text" class="form-control" placeholder="Escriba aqui su nombre"/>
+                  <input id="Nombre" type="text" class="form-control" placeholder="Escriba aqui su nombre"/>
             </div>
           <div class="form-group col-sm-12 col-md-4 col-lg-12">
                 <label for="Pregunta" class="control-label">¿Cómo contribuye el medio ambiente a tu bienestar?</label>
@@ -67,36 +67,35 @@
             
       </div>
       
-      <button id="botonAlerta" type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal">Guardar</button>
+      <!-- <button id="botonAlerta" type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal">Guardar</button>
       <button type="reset" class="btn btn-default">Reset</button>
       <button id="Guardar" type="button" class="btn btn-primary">Guardar formulario</button>    
       <button id="botonAjax" type="button" class="btn btn-primary">Modificar Header con promesa</button>  
       <button id="btnJson" type="button" class="btn btn-primary" title="json">Boton json</button>
-      <button id="btnFetch" type="button" class="btn btn-primary" title="json">Boton fetch</button>
+      <button id="btnFetch" type="button" class="btn btn-primary" title="json">Boton fetch</button> -->
+      <button id="btnConsultaBD" type="button" class="btn btn-primary" title="Consulta">Consulta BD</button>
 
-      <script src="PracticaFinal.js"></script>
+      <script src="./JS/PracticaFinal.js"></script>
 </form>
-          <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="ModalLabel">Guardar</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body "> 
-                      ¿Desea guardar las respuestas?  			
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                      <!-- <button type="button" class="btn btn-primary">Guardar formulario</button> -->
-                      
-                  </div>
-                </div>
-            </div>
+<div class="modal" id="Modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-    <div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
      
 </body>
 
