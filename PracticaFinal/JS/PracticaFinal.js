@@ -53,14 +53,14 @@ $(document).ready(function(){
         
     
     $('#btnConsultaBD').click(function() {
-        let varid= prompt ("ID a consultar.")
+        /* let varid= prompt ("ID a consultar.") */
 
         $('#Modal').modal();
         $('#Modal').on('hidden.bs.modal',function(e){
 
-            let varid= $('#idconsulta').val();
+            let varid= $('#idConsulta').val();
             $.post('./PHP/conectar.PHP',{par1:varid},function (data){
-                refrescar(dato);
+                refrescar(data);
             },'json');
 
         })
@@ -77,14 +77,14 @@ $(document).ready(function(){
     function refrescar(objeto){
 
             $('#Nombre').val(objeto.Nombre);
-            $('#idPregunta1').val(objeto.idPregunta1);
-            $('#idPregunta2').val(objeto.idPregunta2);
-            $('#idPregunta3').val(objeto.idPregunta3);
-            $('#idPregunta4').val(objeto.idPregunta4);
-            $('#idPregunta5').val(objeto.idPregunta5);
-            $('#idPregunta6').val(objeto.idPregunta6);
-            $('#idPregunta7').val(objeto.idPregunta7);
-            $('#idPregunta8').val(objeto.idPregunta8);
+            $('#Pregunta1').val(objeto.Pregunta1);
+            $('#Pregunta2').val(objeto.Pregunta2);
+            $('#Pregunta3').val(objeto.Pregunta3);
+            $('#Pregunta4').val(objeto.Pregunta4);
+            $('#Pregunta5').val(objeto.Pregunta5);
+            $('#Pregunta6').val(objeto.Pregunta6);
+            $('#Pregunta7').val(objeto.Pregunta7);
+            $('#Pregunta8').val(objeto.Pregunta8);
     }
 
 

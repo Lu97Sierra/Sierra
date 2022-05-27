@@ -26,22 +26,22 @@
             </div>
           <div class="form-group col-sm-12 col-md-4 col-lg-12">
                 <label for="Pregunta" class="control-label">¿Cómo contribuye el medio ambiente a tu bienestar?</label>
-                <input id="idPregunta1" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
+                <input id="Pregunta1" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
           </div>
           <div class="form-group col-sm-12 col-md-8 col-lg-12">
                 <label for="Pregunta">¿Qué piensas de la situación del medio ambiente en la zona en la que vives?</label>
-                <input id="idPregunta2" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
+                <input id="Pregunta2" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
           </div>
       </div>
 
       <div class="row">
           <div class="form-group col-sm-12 col-md-8 col-lg-12">
                 <label for="Pregunta">¿Se te ocurre alguna idea comercial para hacer que la producción y el consumo  sean más respetuosos con el medio ambiente?</label>
-                <input id="idPregunta3" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
+                <input id="Pregunta3" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
           </div>
           <div class="form-group col-sm-12 col-md-4 col-lg-6">
                 <label for="Pregunta">¿Sabes cuántos tipos distintos de residuos se reciclan en tu comunidad?</label>
-                <input id="idPregunta4" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
+                <input id="Pregunta4" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
           </div>
       </div>
 
@@ -49,19 +49,19 @@
       <div class="row">
             <div class="form-group col-sm-12 col-md-6 col-lg-4">
                   <label for="Pregunta">¿Se te ocurren formas de mejorar las prácticas de reciclaje en tu hogar y en tu comunidad?</label>
-                  <input id="idPregunta5" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
+                  <input id="Pregunta5" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
             </div>
             <div class="form-group col-sm-12 col-md-6 col-lg-4">
                   <label for="Pregunta">¿Cómo puedes reducir la cantidad de residuos alimentarios?</label>
-                  <input id="idPregunta6" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
+                  <input id="Pregunta6" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
             </div>
             <div class="form-group col-sm-12 col-md-12 col-lg-4">
                   <label for="Pregunta">¿Conoces los efectos sobre el medio ambiente de los alimentos que comes y de los que no?</label>
-                  <input id="idPregunta7" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
+                  <input id="Pregunta7" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
             </div>
             <div class="form-group col-sm-12 col-md-8 col-lg-12">
                   <label for="Pregunta">¿Quién debería limpiar la basura de las playas?</label>
-                  <input id="idPregunta8" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
+                  <input id="Pregunta8" type="text" class="form-control" placeholder="Escriba aqui su respuesta"/>
             </div>
 
             
@@ -81,17 +81,21 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
+            <h5 class="modal-title">Consulta BD</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <p>Modal body text goes here.</p>
+                <form class="formModal">
+                      <label for="id">ID</label>
+                      <input id="idConsulta" type="text" class="form-control" placeholder="id">
+                </form>
+            
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Cerrar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Consultar</button>
           </div>
         </div>
       </div>
