@@ -1,4 +1,20 @@
 $(document).ready(function(){
+  
+
+    btnInsertar.disabled=true;
+    btnModificar.disabled=true;
+    btnBorrar.disabled=true;
+    Nombre.disabled=true;
+    Pregunta1.disabled=true;
+    Pregunta2.disabled=true;
+    Pregunta3.disabled=true;
+    Pregunta4.disabled=true;
+    Pregunta5.disabled=true;
+    Pregunta6.disabled=true;
+    Pregunta7.disabled=true;
+    Pregunta8.disabled=true;
+    
+
     // new Promise(function(resolve,reject) {
     // $('#botonAjax').click(function(){
         
@@ -62,11 +78,112 @@ $(document).ready(function(){
             $.post('./PHP/conectar.PHP',{par1:varid},function (data){
                 refrescar(data);
             },'json');
+            btnInsertar.disabled=false;
+            btnModificar.disabled=false;
+            btnBorrar.disabled=false;
+            Nombre.disabled=false;
+            Pregunta1.disabled=false;
+            Pregunta2.disabled=false;
+            Pregunta3.disabled=false;
+            Pregunta4.disabled=false;
+            Pregunta5.disabled=false;
+            Pregunta6.disabled=false;
+            Pregunta7.disabled=false;
+            Pregunta8.disabled=false;
 
         })
 
 
         });
+
+        $('#btnBorrar').click(function() {
+            /* let varid= prompt ("ID a consultar.") */
+    
+            $('#ModalBorrar').modal();
+            $('#ModalBorrar').on('hidden.bs.modal',function(e){
+    
+                let varid= $('#idBorrar').val();
+                $.post('./PHP/Borrar.PHP',{par1:varid});
+    
+            })
+    
+    
+            });
+
+            $('#btnModificar').click(function() {
+
+                let varid = $('#IDID').val();
+                let Nombre = $('#Nombre').val();
+                let Preg1 = $('#Pregunta1').val();
+                let Preg2 = $('#Pregunta2').val();
+                let Preg3 = $('#Pregunta3').val();
+                let Preg4 = $('#Pregunta4').val();
+                let Preg5 = $('#Pregunta5').val();
+                let Preg6 = $('#Pregunta6').val();
+                let Preg7 = $('#Pregunta7').val();
+                let Preg8 = $('#Pregunta8').val();
+                    $.post('./PHP/Modificar.PHP',{par1:varid, Nombre1:Nombre, preg1:Preg1, preg2:Preg2, preg3:Preg3, 
+                                                 preg4:Preg4, preg5:Preg5, preg6:Preg6 , preg7:Preg7, preg8:Preg8 });
+                                                 swal("Se ha modificado correctamente.");
+
+              
+        
+        
+                });
+                
+
+                $('#btnInsertar').click(function() {
+                    /* let varid= prompt ("ID a consultar.") */
+            
+                    $('#ModalInsertar').modal();
+                    $('#ModalInsertar').on('hidden.bs.modal',function(e){
+            
+                        
+                        let Nombre = $('#Nombre').val();
+                        let Preg1 = $('#Pregunta1').val();
+                        let Preg2 = $('#Pregunta2').val();
+                        let Preg3 = $('#Pregunta3').val();
+                        let Preg4 = $('#Pregunta4').val();
+                        let Preg5 = $('#Pregunta5').val();
+                        let Preg6 = $('#Pregunta6').val();
+                        let Preg7 = $('#Pregunta7').val();
+                        let Preg8 = $('#Pregunta8').val();
+                        $.post('./PHP/Insertar.PHP',{Nombre1:Nombre, preg1:Preg1, preg2:Preg2, preg3:Preg3, 
+                            preg4:Preg4, preg5:Preg5, preg6:Preg6 , preg7:Preg7, preg8:Preg8 });
+            
+                    })
+            
+            
+                    });
+
+                    $('#idInsertar').click(function() {
+
+                        swal("Se ha agregado correctamente.");
+                     
+
+                
+                
+                        });
+
+                        $('#idBorr').click(function() {
+
+                            swal("Se ha borrado correctamente.");
+                         
+    
+                    
+                    
+                            });
+
+                            $('#idMod').click(function() {
+
+                                swal("Se ha modificado correctamente.");
+                             
+        
+                        
+                        
+                                });
+
+                
         
 
 
@@ -76,6 +193,7 @@ $(document).ready(function(){
 
     function refrescar(objeto){
 
+            $('#IDID').val(objeto.ID);
             $('#Nombre').val(objeto.Nombre);
             $('#Pregunta1').val(objeto.Pregunta1);
             $('#Pregunta2').val(objeto.Pregunta2);

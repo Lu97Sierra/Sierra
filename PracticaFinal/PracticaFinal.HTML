@@ -20,6 +20,12 @@
     <div class="container">
     <form class="form">
       <div class="row">
+        <div class="form-group col-sm-12 col-md-4 col-lg-12">
+          <label for="Pregunta" class="control-label">ID</label>
+          <fieldset disabled>
+          <input id="IDID"  type="text" class="form-control" placeholder="ID"/>
+          </fieldset>
+    </div>
             <div class="form-group col-sm-12 col-md-4 col-lg-12">
                   <label for="Pregunta" class="control-label">Nombre</label>
                   <input id="Nombre" type="text" class="form-control" placeholder="Escriba aqui su nombre"/>
@@ -74,6 +80,9 @@
       <button id="btnJson" type="button" class="btn btn-primary" title="json">Boton json</button>
       <button id="btnFetch" type="button" class="btn btn-primary" title="json">Boton fetch</button> -->
       <button id="btnConsultaBD" type="button" class="btn btn-primary" title="Consulta">Consulta BD</button>
+      <button id="btnInsertar" type="button" class="btn btn-primary" title="Insertar">Insertar</button>
+      <button id="btnModificar" type="button" class="btn btn-primary" title="Modificar">Modificar</button>
+      <button id="btnBorrar" type="button" class="btn btn-primary" title="Borrar">Borrar</button>
 
       <script src="./JS/PracticaFinal.js"></script>
 </form>
@@ -84,7 +93,7 @@
             <h5 class="modal-title">Consulta BD</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
-            </button>
+            </button> 
           </div>
           <div class="modal-body">
                 <form class="formModal">
@@ -96,6 +105,76 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-primary">Cerrar</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Consultar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="ModalBorrar" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Borrar por ID</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form class="formModal">
+                      <label for="id">ID</label>
+                      <input id="idBorrar" type="text" class="form-control" placeholder="id">
+                </form>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Cerrar</button>
+            <button type="button" id="idBorr"class="btn btn-secondary" data-dismiss="modal">Borrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="ModalModificar" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modificar</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form class="formModal">
+                      <label for="id">¿Estas seguro de modificar?</label>
+                      <input id="idModificar" type="text" class="form-control" placeholder="id">
+                </form>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Cerrar</button>
+            <button type="button" id="idMod" class="btn btn-secondary" data-dismiss="modal">Modificar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal" id="ModalInsertar" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Insertar por ID</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+               
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Cerrar</button>
+            <button type="button" id="idInsertar" class="btn btn-secondary" data-dismiss="modal">Insertar</button>
           </div>
         </div>
       </div>
