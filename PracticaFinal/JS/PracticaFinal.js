@@ -98,14 +98,23 @@ $(document).ready(function(){
 
         $('#btnBorrar').click(function() {
             /* let varid= prompt ("ID a consultar.") */
+            let varid = $('#IDID').val();
     
-            $('#ModalBorrar').modal();
-            $('#ModalBorrar').on('hidden.bs.modal',function(e){
-    
-                let varid= $('#idBorrar').val();
-                $.post('./PHP/Borrar.PHP',{par1:varid});
-    
-            })
+            $.post('./PHP/Borrar.PHP',{par1:varid});
+            swal("Se ha borrado correctamente.");
+            IDID.value="";
+            var btnInsertar="";
+            var btnModificar="";
+            btnBorrar.value="";
+            Nombre.value="";
+            Pregunta1.value="";
+            Pregunta2.value="";
+            Pregunta3.value="";
+            Pregunta4.value="";
+            Pregunta5.value="";
+            Pregunta6.value="";
+            Pregunta7.value="";
+            Pregunta8.value="";
     
     
             });

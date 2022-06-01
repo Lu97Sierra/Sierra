@@ -1,7 +1,7 @@
 <?php
 
 
-$paridCte= $_POST['par1'];
+$id= $_POST['par1'];
 
 $hostname='localhost';
 $database='l18100233';
@@ -18,7 +18,7 @@ try{
 
 
 try {
-    $consultaSql = "delete from preguntas where ID =".$paridCte;
+    $consultaSql = "delete from preguntas where ID =".$id;
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $consulta->closeCursor();
