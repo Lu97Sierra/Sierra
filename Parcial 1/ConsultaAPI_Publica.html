@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <title>Document</title>
+
+    </head>
+    <body>
+        <button id="boton">Hacer fetch</button>
+        <img id="imagen" height="400px" width="400px">
+
+        <script>
+            document.getElementById('boton').addEventListener('click',function(){
+                hacerPeticion();
+            });
+
+            function hacerPeticion(){
+            fetch("https://api.waifu.pics/sfw/waifu")
+            .then(respuesta => respuesta.json() )
+            .then(datos => document.getElementById("imagen").src=datos.url)
+            }
+        </script>
+    </body>
+</html>

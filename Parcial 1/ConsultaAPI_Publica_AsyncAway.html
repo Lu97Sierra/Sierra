@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <title>Document</title>
+
+    </head>
+    <body>
+        <button id="boton">Hacer fetch</button>
+        <h1 id="titulo"> Hello world</h1>
+        <img id="imagen" height="400px" width="400px">
+
+        <script>
+            document.getElementById('boton').addEventListener('click', async function(){
+                let dato = await hacerPeticion();
+                console.log(dato)
+                document.getElementById('titulo').textContent = dato.text;
+            });
+
+            async function hacerPeticion(){
+            let respuesta = await fetch("https://api.waifu.pics/sfw/waifu")
+            let datojson = await respuesta.json() 
+            return datojson;
+            }
+        </script>
+    </body>
+</html>
