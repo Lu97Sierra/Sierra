@@ -1,4 +1,4 @@
-# Los códigos de estado de respuesta HTTP indican si se ha completado satisfactoriamente una solicitud HTTP específica. Las respuestas se agrupan en cinco clases:
+## Los códigos de estado de respuesta HTTP indican si se ha completado satisfactoriamente una solicitud HTTP específica. Las respuestas se agrupan en cinco clases:
 
 ### Respuestas informativas (100–199),
 ### Respuestas satisfactorias (200–299),
