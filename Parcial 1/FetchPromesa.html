@@ -16,7 +16,7 @@
             });
 
             function hacerPeticion(){
-            fetch("https://api.waifu.pics/sfw/waifu")
+            fetch("http://dog-api.kinduff.com/api/facts")
             .then(respuesta => respuesta.json() )
             .then(datos => document.getElementById("imagen").src=datos.url)
             }
