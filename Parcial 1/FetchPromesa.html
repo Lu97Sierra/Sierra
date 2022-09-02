@@ -8,17 +8,25 @@
     </head>
     <body>
         <button id="boton">Hacer fetch</button>
-        <img id="imagen" height="400px" width="400px">
+        
+        
+        
+        <p id="nombre"></p>
+        
 
         <script>
             document.getElementById('boton').addEventListener('click',function(){
                 hacerPeticion();
+                //document.getElementById('nombre').textcontent='Hello there';
+                
             });
 
             function hacerPeticion(){
-            fetch("http://dog-api.kinduff.com/api/facts")
-            .then(respuesta => respuesta.json() )
-            .then(datos => document.getElementById("imagen").src=datos.url)
+            
+            fetch('https://animechan.vercel.app/api/random')
+            .then(response => response.json())
+            .then(datos => document.getElementById('nombre').textContent=datos.quote)  
+            
             }
         </script>
     </body>

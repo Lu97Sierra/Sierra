@@ -10,7 +10,7 @@
     <body>
         <button id="boton">Recarga</button>
          <!-- <h1 id="titulo"> Hello world</h1> -->
-        <img id="imagen" height="400px" width="400px" > 
+        <p id="nombre"></p>
 
         <script>
             document.getElementById('boton').addEventListener('click', async function(){
@@ -20,10 +20,9 @@
             });
 
             async function hacerPeticion(){
-            let respuesta = await fetch('https://api.waifu.pics/sfw/waifu')
+            let respuesta = await fetch('https://animechan.vercel.app/api/random')
             console.log(respuesta)
-            // let datojson = await respuesta.json() 
-            // return datojson;
+            
             }
         </script>
     </body>

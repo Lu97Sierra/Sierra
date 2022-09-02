@@ -15,15 +15,15 @@
 
         <button id="btnConsulta">PedirChuck</button>
 
-        <label for="BromaChuck">ChuckNorris dice:</label>
-        <textarea id="BromaChuck" cols="30" rows="10"></textarea>
+        <label for="broma">ChuckNorris dice:</label>
+        <textarea id="broma" cols="30" rows="10"></textarea>
 
         <script>
             document.getElementById("btnConsulta").addEventListener("click", async function(){
                 let broma = await traerBroma();
                 console.log(broma);
-
-                document.getElementById("broma").value=broma.value.joke;
+                document.getElementById("broma").textContent=broma.value.joke;
+                
 
             });
 
@@ -32,7 +32,7 @@
                 let vNom=document.getElementById("nombre").value;
                 let vApp=document.getElementById("apellido").value;
 
-                let vUrl='http://api.icndb.com/jokes/random?firstName=${vNom}&astName=${vApp}';
+                let vUrl=`http://api.icndb.com/jokes/random?firstName=${vNom}&astName=${vApp}`;
 
             let headersList = {
                 "Accept": "*/*",
@@ -45,6 +45,7 @@
             });
 
             let data = await response.json();
+            console.log(data.value);
             return data;
 
         }
