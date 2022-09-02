@@ -1,3 +1,11 @@
+# Respuestas satisfactorias
+
+* GET: El recurso se ha obtenido y se transmite en el cuerpo del mensaje.
+* HEAD: Los encabezados de entidad están en el cuerpo del mensaje.
+* PUT o POST: El recurso que describe el resultado de la acción se transmite en el cuerpo del mensaje.
+* TRACE: El cuerpo del mensaje contiene el mensaje de solicitud recibido por el servidor.
+
+
 ## Los códigos de estado de respuesta HTTP indican si se ha completado satisfactoriamente una solicitud HTTP específica. Las respuestas se agrupan en cinco clases:
 
 ### Respuestas informativas (100–199),
@@ -14,11 +22,7 @@
 ### Este código indica que el servidor ha recibido la solicitud y aún se encuentra procesandola, por lo que no hay respuesta disponible.
 ### 103 Early Hints (en-US)
 ### Este código de estado está pensado principalmente para ser usado con el encabezado Link, permitiendo que el agente de usuario empiece a pre-cargar recursos mientras el servidor prepara una respuesta.
-### Respuestas satisfactorias
-### GET: El recurso se ha obtenido y se transmite en el cuerpo del mensaje.
-### HEAD: Los encabezados de entidad están en el cuerpo del mensaje.
-### PUT o POST: El recurso que describe el resultado de la acción se transmite en el cuerpo del mensaje.
-### TRACE: El cuerpo del mensaje contiene el mensaje de solicitud recibido por el servidor.
+
 ### 200 OK
 ### La solicitud ha tenido éxito. El significado de un éxito varía dependiendo del método HTTP:
 ### 201 Created
