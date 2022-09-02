@@ -16,7 +16,7 @@
             document.getElementById('boton').addEventListener('click', async function(){
                 let dato = await hacerPeticion();
                 console.log(dato)
-                // document.getElementById('imagen').src=dato.url;
+                 document.getElementById('imagen').src=dato.url;
             });
 
             async function hacerPeticion(){
