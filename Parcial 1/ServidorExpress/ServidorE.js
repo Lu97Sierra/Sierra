@@ -1,10 +1,25 @@
 var express = require('express')
 var cors = require('cors')
+var fs = require('fs')
+var morgan = require('morgan')
+var path = require('path')
 
 var app = express()
+
+app.use(cors({origin:"http://localhost"}))
 app.use(express.text())
 app.use(express.json())
-app.use(cors({origin:"http://localhost"}))
+
+var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+app.use(morgan('combined', { stream: accessLogStream }))
+
+/* app.use((res,res,next)=> {
+    console.log('Primer mirroware')
+    next()
+},(res,res,next)=> {
+    console.log('Segunda MirrorWare')
+    next()
+}) */
 
 // app.get('/',(req,res) => {
 //     //res.send('Servidor Express contestando a get desde el puerto 8082')
