@@ -3,6 +3,7 @@ var cors = require('cors')
 var fs = require('fs')
 var morgan = require('morgan')
 var path = require('path')
+var cadenas = require('./cadena')
 
 var app = express()
 
@@ -29,13 +30,24 @@ app.use(morgan('combined', { stream: accessLogStream }))
 app.post('/texto',(req,res) => {
     //res.send('Servidor Express contestando a post desde el puerto 8082')
     //res.json({usuario:'Gustavo'})
-    console.log(req.body)
-    let say = req.body.toUpperCase()
-    let sinesp = req.body.trim()
-    let longi = req.body.lenght
-    res.json({ mayusculas: may,
-               sinespacios: sinesp,
-                longitud: longi})
+    // console.log(req.body)
+    // let say = req.body.toUpperCase()
+    // let sinesp = req.body.trim()
+    // let longi = req.body.lenght
+    // res.json({ mayusculas: may,
+    //            sinespacios: sinesp,
+    //             longitud: longi})
+
+    console.log(req.body);
+     let may = cadenas.pasarMayusculas(req.body);
+     let sinep = cadenas.quitarEspacios(req.body);
+     let longi = cadenas.obtenerLongitud(req.body);
+
+     res.json({
+        mayusculas: may,
+        sinespacios: sinep,
+        longitud: longi
+     })
 })
 
 app.post('/json',(req,res) => {
