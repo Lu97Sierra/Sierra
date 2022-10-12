@@ -1,0 +1,33 @@
+<DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE-edge">
+            <title>Document</title>
+    
+        </head>
+        <body>
+            <label for="cadena">Palabras</label>
+            <input id="cadena" type="text">
+            <button id="btn1">Mayusculas</button>
+            <button id="btn2">Sin Espacio</button>
+    
+            <script type="module">
+    
+                
+                document.getElementById("btn1").addEventListener('click',function(){
+                    import ('./cadena').then((palabra)=>{
+                        let cad=document.getElementById("cadena").value;
+                        let cadmay=palabra.pasarMayusculas(cad);
+                        console.log(cadmay)
+                    })
+                    
+                })
+                // document.getElementById("btn2").addEventListener('click',function(){
+                //     let cad=document.getElementById("cadena").value;
+                //     let cadmay=quitarEspacios(cad);
+                //     console.log(cadmay)
+                // })
+            </script>
+        </body>
+    </html>
