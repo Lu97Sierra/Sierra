@@ -1,27 +1,21 @@
-const xp = require("express")
-const pg = require("pg")
+const express = require("express")
+var mySQL = require("mySQL")
+const app = express()
 
-const conString = {
+var con = mySQL.createConnection({
     user: 'root',
     host: '127.0.0.1',
     database: 'L18100233',
-    password: 'password'
-}
+    password: 'password',
+    port: '3306'
+});
 
-var pgClient = new pg.Client(conString);
-
-const app = xp()
-
-app.use(xp.json())
-app.use(xp.text())
-
-app.get('/',function(req,res) {
-    pgClient.connect()
-    pgClient.query('SELECT * FROM preguntas WHERE ID =' + req.body)
-    .then(response =>{
-        console.log(response.rows)
-        res.send(response.rows)
-    })
-})
+app.get('/get/:ID',function(req,res) {
+    let sql=(`SELECT * FROM preguntas WHERE ID = ${req.params.ID}`);
+    let query = con.query(sql,(err,result)=>{
+        if(err) throw err;
+        res.send(result)
+    });
+});
 
 app.listen(1234)
