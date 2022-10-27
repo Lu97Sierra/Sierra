@@ -1,6 +1,10 @@
 const express = require("express")
 var mySQL = require("mySQL")
 const app = express()
+const cors = require('cors')
+app.use(cors({origin:"*"})) //poner un asterico para que pase todo en all
+app.use(express.text())
+app.use(express.json())
 
 var con = mySQL.createConnection({
     user: 'root',
@@ -12,6 +16,14 @@ var con = mySQL.createConnection({
 
 app.get('/get/:ID',function(req,res) {
     let sql=(`SELECT * FROM preguntas WHERE ID = ${req.params.ID}`);
+    let query = con.query(sql,(err,result)=>{
+        if(err) throw err;
+        res.send(result)
+    });
+});
+
+app.get('/get',function(req,res) {
+    let sql=(`SELECT * FROM preguntas`);
     let query = con.query(sql,(err,result)=>{
         if(err) throw err;
         res.send(result)
