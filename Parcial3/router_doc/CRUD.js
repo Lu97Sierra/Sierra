@@ -24,16 +24,20 @@ router.get('/get/:ID',function(req,res) {
     });
 });
 
-/**
- * @swagger
- * /pregunta:
- * get:
- * description: Welcome to swagger-jsdoc!
- * responses:
- * 200:
- * description: Returns a mysterious string.
- */
-
+/**  
+* @swagger
+* /preguntas:
+*  get:
+*    description: Obtiene Preguntas
+*    responses:
+*      200:
+*        description: Lista de Respuestas de Preguntas.
+*        content:
+*          application/json:
+*            schema:
+*              type: array
+*              items:
+*/
 
 router.get('/',function(req,res) {
     let sql=(`SELECT * FROM preguntas`);
@@ -42,16 +46,6 @@ router.get('/',function(req,res) {
         res.send(result)
     });
 });
-
-/**
- * @swagger
- * /pregunta:
- * post:
- * description: Welcome to swagger-jsdoc!
- * responses:
- * 200:
- * description: Returns a mysterious string.
- */
 
 
 router.post('/post',(req,res) => {
