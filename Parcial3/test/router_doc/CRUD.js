@@ -48,19 +48,27 @@ router.get('/',function(req,res) {
 });
 
 
+/**  
+* @swagger
+* /EnviarPreguntas:
+*  get:
+*    description: Obtiene Preguntas
+*    responses:
+*      200:
+*        description: Lista de Respuestas de Preguntas.
+*        content:
+*          application/json:
+*            schema:
+*              type: array
+*              items:
+*/
 router.post('/post',(req,res) => {
     console.log(req.query);
 
     let params = {
         'Nombre': req.query.Nombre,
         'Pregunta1': req.query.Pregunta1,
-        'Pregunta2': req.query.Pregunta2,
-        'Pregunta3': req.query.Pregunta3,
-        'Pregunta4': req.query.Pregunta4,
-        'Pregunta5': req.query.Pregunta5,
-        'Pregunta6': req.query.Pregunta6,
-        'Pregunta7': req.query.Pregunta7,
-        'Pregunta8': req.query.Pregunta8
+        'Pregunta2': req.query.Pregunta2
     }
 
     let sql = 'INSERT INTO preguntas SET ?';
@@ -76,13 +84,7 @@ router.put('/put/:ID', (req, res) => {
     let querys = {
         'Nombre': req.query.Nombre,
         'Pregunta1': req.query.Pregunta1,
-        'Pregunta2': req.query.Pregunta2,
-        'Pregunta3': req.query.Pregunta3,
-        'Pregunta4': req.query.Pregunta4,
-        'Pregunta5': req.query.Pregunta5,
-        'Pregunta6': req.query.Pregunta6,
-        'Pregunta7': req.query.Pregunta7,
-        'Pregunta8': req.query.Pregunta8
+        'Pregunta2': req.query.Pregunta2
     }
     let sql = `UPDATE preguntas SET ? WHERE ID= ${req.params.ID}`;
 
