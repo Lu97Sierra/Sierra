@@ -22,13 +22,13 @@ const swaggerOptions = {definition:{
 
 app.use(express.json())
 app.use(express.text())
-app.use(cors({ origin:"http://localhost"}))
+app.use(cors({ origin:"*"}))
 
 app.use('/MostrarConsejos',ruta_consejo.router);
 app.use('/MostrarConsejos/',ruta_consejo.router);
 app.use('/AgregarConsejos',ruta_consejo.router);
-app.use('/actualizarConsejo/',ruta_consejo.router);
-app.use('/borrarConsejo/',ruta_consejo.router);
+app.use('/actualizarConsejo',ruta_consejo.router);
+app.use('/borrarConsejo',ruta_consejo.router);
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use("/api-docs",swaggerUI.serve,swaggerUI.setup(swaggerDocs));

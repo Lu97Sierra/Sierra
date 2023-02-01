@@ -7,7 +7,7 @@ chai.use(chaiHttp);const url= 'http://localhost:8082';
 describe('Inserte un consejo: ',()=>{     
     it('Escribir consejos', (done) => {       
         chai.request(url)   
-        .post('/AgregarConsejos/post')
+        .post('/AgregarConsejos')
         .send({ consejo:"La curva de una sonrisa es capaz de enderezar muchas cosas." })
         .end( function(err,res){
             expect(res).to.have.status(200);        
