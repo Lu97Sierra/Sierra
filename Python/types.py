@@ -131,37 +131,145 @@
 
 # x,y,z = l3
 # print(x,y,z)
-lista=[1,2,3,4]
-for elemento in lista:
-    print(elemento)
+# lista=[1,2,3,4]
+# for elemento in lista:
+#     print(elemento)
 
-for index,l in enumerate(lista):
-    print(index,l)
+# for index,l in enumerate(lista):
+#     print(index,l)
 
-lista2 = ["c","z","a"]
+# lista2 = ["c","z","a"]
 
-for l1,l2 in zip(lista,lista2):
-    print(l1,l2)
+# for l1,l2 in zip(lista,lista2):
+#     print(l1,l2)
 
-for i in range(0,len(lista)):
-    print(lista[i])
+# for i in range(0,len(lista)):
+#     print(lista[i])
 
-l = [2,3]
-l.append(3)
-print(l)
-l.extend([1,2,3,4])
-print(l)
-l.insert(0,100)
-print(l)
-l.remove(100)
-print(l)
-l.pop()
-print(l)
+# l = [2,3]
+# l.append(3)
+# print(l)
+# l.extend([1,2,3,4])
+# print(l)
+# l.insert(0,100)
+# print(l)
+# l.remove(100)
+# print(l)
+# l.pop()
+# print(l)
 
-l.reverse()
-print(l)
+# l.reverse()
+# print(l)
 
-l.sort()
-print(l)
-l.sort(reverse=True)
-print(l)
+# l.sort()
+# print(l)
+# l.sort(reverse=True)
+# print(l)
+
+
+#SETS
+
+# Son valores mutables e inmutables a la vez, esto quiere decir que se pueden agregar o eliminar valores, pero
+# no se pueden modificar
+
+
+# Se elimina los duplicados y se ordenan automaticamente
+# s = set([5,4,3,2,1,1,8])
+# print(s)
+
+# # Se puede utilizar tambien con llaves
+# s = {5,4,6,8,8,1}
+# print(s)
+
+# # Si la llaves tienen al menos un valor 0, lo declara como set, si ni tiene nada i esta vacio, lo interpreta como dictionary
+# s= {0}
+# d= {}
+# print(type(s))
+# print(type(d))
+
+
+# lista = ["Mexico","España"]
+# s = set(["USA","Tlaxcala",["Mexico","España"]])
+# print(s)
+
+
+# s1 = {1,2,3}
+# s2 = {4,5,6}
+
+# print(s1.union(s2))
+
+# print(s1.intersection(s2))
+
+# d1 = {
+#     "Nombre": "Roberto",
+#     "Edad":24,
+#     "documento":23233
+# }
+# print(d1)
+# d2 = dict([("NOmbre",'Rocio'),("Edad",24),('documento',2345)])
+# print(d2)
+# d3 = dict(Nombre='Rocio', Edad=24, documento= 332323)
+# print(d3)
+
+# print(d1.get("Nombre"))
+# print(d1["Nombre"])
+
+# d1["Nombre"]="Juan"
+# print(d1)
+# d1["Direccion"]="Calle123"
+# print(d1)
+# d1["obj"] = {"Curp":1212}
+
+# for x in d1:
+#     print(d1[x])
+
+# for x,y in d1.items():
+#     print(x,y)
+
+
+# d1 = {'a':1, "b":2}
+# d2 = {"c":3, "d":4}
+# d = {
+#     "d1":d1,
+#     "d2":d2
+# }
+# print(d)
+
+# d.clear()
+# print(d)
+
+# d = {"a":1,"b":2}
+# print(d.get("a"))
+
+# it = d.items()
+
+# print(it)
+# print(list(it))
+# print(list(it)[0][1])
+
+# k = d.keys()
+# print(k)
+# print(list(k)[1])
+
+# d.pop('a')
+# print(d)
+# pop = d.pop('c',-1)
+# print(pop)
+
+# # d.popitem()
+# # print(d)
+
+# d1 ={"a":1,"b":2}
+# d2 = {"c":233,"d":122}
+# d1.update(d2)
+# print(d1)
+
+# d.pop('c')
+
+# try:
+#     pass
+# except KeyError as e:
+
+
+
+
