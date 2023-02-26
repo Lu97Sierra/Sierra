@@ -1,74 +1,51 @@
 class Usuario:
-    def __init__(self, usuario, contrasena, rol, nombre, curp, ciudad):
+    def __init__(self, usuario, contraseña, nombre, curp, ciudad, rol='cliente'):
         self.usuario = usuario
-        self.contrasena = contrasena
+        self.contraseña = contraseña
         self.rol = rol
         self.nombre = nombre
         self.curp = curp
         self.ciudad = ciudad
-
-class Menu:
-    def __init__(self):
-        self.usuarios = []
-        self.usuario_actual = None
-        self.rol_administrador = "administrador"
-
-    def registrar_usuario(self):
-        print("Registro de nuevo usuario:")
-        usuario = input("Usuario: ")
-        contrasena = input("Contraseña: ")
-        nombre = input("Nombre: ")
-        curp = input("CURP: ")
-        ciudad = input("Ciudad: ")
-
-        # Verificar que la CURP no se repita
-        if any(usuario.curp == curp for usuario in self.usuarios):
-            print("Error: La CURP ya está registrada")
+        
+    def __str__(self):
+        return f'Usuario: {self.usuario}\nRol: {self.rol}\nNombre: {self.nombre}\nCURP: {self.curp}\nCiudad: {self.ciudad}'
+        
+    @staticmethod
+    def registrar():
+        usuario = input('Ingrese el usuario: ')
+        contraseña = input('Ingrese la contraseña: ')
+        nombre = input('Ingrese el nombre: ')
+        curp = input('Ingrese el CURP: ')
+        ciudad = input('Ingrese la ciudad: ')
+        nuevo_usuario = Usuario(usuario, contraseña, nombre, curp, ciudad)
+        if nuevo_usuario in usuarios_registrados:
+            print('El usuario ya existe')
         else:
-            # Crear nuevo usuario y añadirlo a la lista
-            nuevo_usuario = Usuario(usuario, contrasena, "usuario", nombre, curp, ciudad)
-            self.usuarios.append(nuevo_usuario)
-            print("Usuario registrado correctamente")
-
-    def iniciar_sesion(self):
-        print("Inicio de sesión:")
-        usuario = input("Usuario: ")
-        contrasena = input("Contraseña: ")
-
-        # Buscar usuario en la lista
-        for usuario in self.usuarios:
-            if usuario.usuario == usuario and usuario.contrasena == contrasena:
-                self.usuario_actual = usuario
-                print("Sesión iniciada correctamente")
+            usuarios_registrados.append(nuevo_usuario)
+            print('Usuario registrado correctamente')
+    
+    @staticmethod
+    def iniciar_sesion():
+        usuario = input('Ingrese el usuario: ')
+        contraseña = input('Ingrese la contraseña: ')
+        for u in usuarios_registrados:
+            if u.usuario == usuario and u.contraseña == contraseña:
+                print(u)
                 return
+        print('Datos incorrectos')
+        
+usuarios_registrados = []
+admin = Usuario('admin', 'admin123', 'Administrador', '0000000000000', 'Ciudad de México', 'administrador')
 
-        print("Error: Usuario o contraseña incorrectos")
-
-    def mostrar_usuarios(self):
-        if self.usuario_actual and self.usuario_actual.rol == self.rol_administrador:
-            print("Lista de usuarios registrados:")
-            for usuario in self.usuarios:
-                print(usuario.__dict__)
-        else:
-            print("Error: Acceso denegado")
-
-    def ejecutar(self):
-        while True:
-            print("\nMenú:")
-            print("1. Registro")
-            print("2. Inicio de sesión")
-            print("3. Salida")
-            opcion = input("Seleccione una opción: ")
-
-            if opcion == "1":
-                self.registrar_usuario()
-            elif opcion == "2":
-                self.iniciar_sesion()
-            elif opcion == "3":
-                print("Hasta luego")
-                break
-            else:
-                print("Opción no válida")
-
-menu = Menu()
-menu.ejecutar()
+while True:
+    print('MENU\n1.- Registro\n2.- Inicio de sesión\n3.- Salida')
+    opcion = input('Seleccione una opción: ')
+    if opcion == '1':
+        Usuario.registrar()
+    elif opcion == '2':
+        Usuario.iniciar_sesion()
+    elif opcion == '3':
+        break
+    elif admin.usuario == opcion and admin.contraseña == input('Ingrese la contraseña del administrador: '):
+        for u in usuarios_registrados:
+            print(u)

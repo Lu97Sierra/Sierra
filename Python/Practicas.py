@@ -59,3 +59,73 @@
 # print(contador_dict(creador_dict(entrada)))
 
 
+#-----------------------------------------------------------------------------------------------------------------------
+
+# en una matriz de 5x4 pedir al usuario los valores, en una segunda matriz
+# guardar uno si el numero guardado en la misma posicion es multiplo de 3, guardar un 2 si el numero es multiplo 
+# de 5 o guardar un 3 si es multiplo de 5 y 3 a la vez, si no se cumple ninguna de las anteriores 
+# guardar un cero imprimir ambas matrizes en formato de matriz.
+
+
+# Inicializar la primera matriz
+matriz1 = []
+matriz2 = []
+for i in range(5):
+    filaM1 = []
+    filaM2 = []
+    for j in range(4):
+        valor = int(input(f"Ingrese el valor en la posición ({i}, {j}): "))
+        filaM1.append(valor)
+        if valor % 3 == 0 and valor % 5 == 0:
+            filaM2.append(3)
+        elif valor % 3 == 0:
+            filaM2.append(1)
+        elif valor % 5 == 0:
+            filaM2.append(2)
+        else:
+            filaM2.append(0)
+
+    matriz1.append(filaM1)
+    matriz2.append(filaM2)
+
+# Inicializar la segunda matriz
+
+# for i in range(5):
+#     fila = []
+#     for j in range(4):
+#         valor = matriz1[i][j]
+#         if valor % 3 == 0 and valor % 5 == 0:
+#             fila.append(3)
+#         elif valor % 3 == 0:
+#             fila.append(1)
+#         elif valor % 5 == 0:
+#             fila.append(2)
+#         else:
+#             fila.append(0)
+#     matriz2.append(fila)
+
+# Imprimir ambas matrices
+print("Matriz 1:")
+for fila in matriz1:
+    print(fila)
+
+print("Matriz 2:")
+for fila in matriz2:
+    print(fila) 
+
+
+
+# ------------------------------------------------------------------------------
+# Conecta 4, van hacer el primer jugar
+# El tablero va a hacer de 6x7
+# Se debe visualizar el recorrido de las fichas
+# El jugador debe elegir la columna donde quiere su ficha
+# Gana el priemro que agrupe 4 fichas
+# En horizontal, vertical o diagonal
+# Si se acaba el espacio en el tablero es empate
+# De lo contrario mostrar el msj del ganador
+
+
+
+
+
