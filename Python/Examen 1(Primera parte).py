@@ -1,3 +1,9 @@
+#-------------------------
+#Numeros de control: 18100233, 16100172
+#------------------------------------
+
+
+
 # Dividir un cierto entero n por otro entero m hasta n = 1 obteniendo una secuencia de numeros, cada numero de esta secuencia
 # almacenados en una lista, las secuencias deben cumplir hasta llegar a n = 1, si n =1 se debera
 # imprimir la secuencia entera e imprimir en pantalla "secuencia invalida"
