@@ -64,14 +64,20 @@ def coincidencia_listas(lista1, lista2):
     return coincidencias, no_coincidencias
 
 coincidencias, no_coincidencias = coincidencia_listas(['a','b',2,3],['c','d',3,4])
+coincidencias = set(coincidencias)
+no_coincidencias = set(no_coincidencias)
 print("Coincidencias:", coincidencias)
 print("No coincidencias:", no_coincidencias)
 print("-------------------------------------------------------")
 coincidencias, no_coincidencias = coincidencia_listas(['a','b',2,3],['c','d',4])
+coincidencias = set(coincidencias)
+no_coincidencias = set(no_coincidencias)
 print("Coincidencias:", coincidencias)
 print("No coincidencias:", no_coincidencias)
 print("-------------------------------------------------------")
 coincidencias, no_coincidencias = coincidencia_listas(['a','b',2,2,3],['c','d',2,'a',4])
+coincidencias = set(coincidencias)
+no_coincidencias = set(no_coincidencias)
 print("Coincidencias:", coincidencias)
 print("No coincidencias:", no_coincidencias)
 
