@@ -414,3 +414,59 @@ INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:00:58] "GET /indexd HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:00:58] "[33mGET /static/indexd.css HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:01:13] "GET /indexd HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:01:13] "[33mGET /static/indexd.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 563-882-715
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:02:27] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:02:27] "[33mGET /static/indexd.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:04] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:05] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:05] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:06] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:06] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:06] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:07] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:07] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:53] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:53] "[33mGET /static/indexd.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:54] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:54] "[33mGET /static/indexd.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:55] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:55] "[33mGET /static/indexd.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:55] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:03:55] "[33mGET /static/indexd.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:04:00] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:04:00] "[33mGET /static/indexd.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:04:01] "GET /indexd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:04:01] "[33mGET /static/indexd.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:06:47] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:06:47] "[33mGET /templates/static/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:06:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:06:50] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:06:50] "[33mGET /templates/static/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:06:52] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:06:52] "[33mGET /templates/static/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:17] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:17] "[33mGET /templates/static/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:18] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:18] "[33mGET /templates/static/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:20] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:20] "[33mGET /templates/static/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:30] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:30] "[33mGET /templates/static/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:42] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:42] "[33mGET /templates/static/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:43] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:43] "[33mGET /templates/static/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:44] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:46] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:46] "[33mGET /templates/static/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:57] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:57] "[33mGET /templates/static/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:58] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Apr/2023 13:07:58] "[33mGET /templates/static/index.css HTTP/1.1[0m" 404 -
