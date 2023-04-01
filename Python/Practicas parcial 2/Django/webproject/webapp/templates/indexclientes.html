@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 2</title>
+</head>
+<body>
+    <h1>Listado pedidos</h1>
+    <table border = "1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for pedido in pedidos %}
+                <tr>
+                    <td>{{pedido.id}}</td>
+                    <td>{{pedido.telefono}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h1>Listado Clientes</h1>
+    <table border = "1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for cliente in clientes %}
+                <tr>
+                    <td>{{cliente.id}}</td>
+                    <td>{{cliente.nombre}}</td>
+                    <td>{{cliente.telefono}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h1>Listado Ventas</h1>
+    <table border = "1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fecha</th>
+                <th>Monto</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for venta in ventas %}
+                <tr>
+                    <td>{{venta.id}}</td>
+                    <td>{{venta.fecha}}</td>
+                    <td>{{venta.monto}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

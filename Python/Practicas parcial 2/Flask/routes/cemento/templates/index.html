@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../templates/static/index.css">
+</head>
+<body>
+    <h1>Listado de cementos</h1>
+    <div>
+        <a href="{{url_for('appCemento.agregar')}}">Agregar Cemento</a>
+    </div>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Marca</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for cemento in cementos%}
+                <tr>
+                    <td>{{cemento.id}}</td>
+                    <td>{{cemento.Marca}}</td>
+                    <td><a href="detalle/{{cemento.id}}">Detalle</a></td>
+                    <td><a href="editar/{{cemento.id}}">Editar</a></td>
+                    <td><a href="eliminar/{{cemento.id}}">Eliminar</a></td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
