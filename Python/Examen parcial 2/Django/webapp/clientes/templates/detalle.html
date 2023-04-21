@@ -1,0 +1,9 @@
+{% block body %}
+    <h1>
+        {{cliente.id}}
+        {{cliente.nombre}}
+        {{cliente.email}}
+        {{cliente.pedidos_id}}
+    </h1>
+    <a href="{% url 'indexClientes'%}">Regresar al listado</a>
+{% endblock %}

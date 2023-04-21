@@ -1,0 +1,9 @@
+{% block body %}
+    <h1>
+        {{empleado.id}}
+        {{empleado.nombre}}
+        {{empleado.puesto}}
+        {{empleado.salario}}
+    </h1>
+    <a href="{% url 'indexEmpleados'%}">Regresar al listado</a>
+{% endblock %}

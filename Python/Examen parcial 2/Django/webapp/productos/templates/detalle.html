@@ -1,0 +1,9 @@
+{% block body %}
+    <h1>
+        {{producto.id}}
+        {{producto.nombre}}
+        {{producto.precio}}
+        {{producto.categoria_id}}
+    </h1>
+    <a href="{% url 'indexProductos'%}">Regresar al listado</a>
+{% endblock %}

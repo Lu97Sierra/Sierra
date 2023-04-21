@@ -1,0 +1,12 @@
+{% block body %}
+<div class="container">
+    <form action="" method="POST">
+        <h1>Agregar Clinte</h1>
+        <table>
+            {{formaCliente}}
+        </table>
+        <button type="submit">Enviar</button>
+        {%csrf_token%}
+    </form>
+</div>
+{% endblock %}

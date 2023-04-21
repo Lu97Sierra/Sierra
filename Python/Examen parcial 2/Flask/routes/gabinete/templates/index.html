@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+</head>
+<body>
+    <h1>Listado de Gabinete</h1>
+    <div>
+        <a href="{{url_for('appGabinete.agregar')}}">Agregar Gabinete</a>
+    </div>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Marca</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for gabinete in gabinetes%}
+                <tr>
+                    <td>{{gabinete.id}}</td>
+                    <td>{{gabinete.Marca}}</td>
+                    <td><a href="detalle/{{gabinete.id}}">Detalle</a></td>
+                    <td><a href="editar/{{gabinete.id}}">Editar</a></td>
+                    <td><a href="eliminar/{{gabinete.id}}">Eliminar</a></td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
