@@ -1,0 +1,4 @@
+08:14:25:AM: DEBUG [Logger_base.py] :9 Mensaje Debug
+08:14:25:AM: WARNING [Logger_base.py] :10 Mesaje Warning
+08:14:25:AM: ERROR [Logger_base.py] :11 Mensaje Error
+08:14:25:AM: CRITICAL [Logger_base.py] :12 Mensaje Critico
