@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_fragment_lista_frutas_to_fragment_frutas"
+        android:icon="@android:drawable/ic_menu_add"
+        app:showAsAction="always"
+        android:title="Agregar Frutas"/>
+
+    <item android:id="@+id/menu_fragment_lista_frutas_to_fragment_lista_frutas"
+        android:title="Lista Frutas"/>
+
+    <item android:id="@+id/menu_fragment_lista_frutas_to_fragment_frutas_verduras"
+        android:title="Agregar Frutas y verduras"/>
+
+</menu>

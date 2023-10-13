@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ListaFrutasFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.a2.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.a2.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AgregarArituloFragment"
+        android:name="com.example.a2.AgregarArticuloFragment"
+        android:label="AgregarArticulo"
+        tools:layout="@layout/fragment_agregar_verdura">
+        <action
+            android:id="@+id/action_AgregarArituloFragment_to_ListaArticulosFragment"
+            app:destination="@id/ListaFrutasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ListaFrutasFragment"
+        android:name="com.example.a2.ListaArticulosFragment"
+        android:label="ListaFrutas"
+        tools:layout="@layout/fragment_lista_articulos">
+        <action
+            android:id="@+id/action_ListaArticulosFragment_to_AgregarArituloFragment"
+            app:destination="@id/AgregarArituloFragment" />
+        <action
+            android:id="@+id/action_ListaArticulosFragment_to_ListaCategoriasFragment"
+            app:destination="@id/ListaVerduraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AgregarVerduraFragment"
+        android:name="com.example.a2.AgregarCategoriaFragment"
+        android:label="AgregarVerdura"
+        tools:layout="@layout/fragment_agregar_fruta">
+        <action
+            android:id="@+id/action_AgregarCategoriaFragment_to_ListaCategoriasFragment"
+            app:destination="@id/ListaVerduraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ListaVerduraFragment"
+        android:name="com.example.a2.ListaCategoriasFragment"
+        android:label="ListaVerduras"
+        tools:layout="@layout/fragment_lista_tipos_fruta">
+        <action
+            android:id="@+id/action_ListaVerduraFragment_to_AgregarverduraFragment"
+            app:destination="@id/AgregarVerduraFragment" />
+    </fragment>
+</navigation>
