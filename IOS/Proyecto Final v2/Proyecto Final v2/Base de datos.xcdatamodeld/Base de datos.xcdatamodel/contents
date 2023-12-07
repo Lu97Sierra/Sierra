@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Perfilesdatos" representedClassName="Perfilesdatos" syncable="YES" codeGenerationType="class">
+        <attribute name="contrasena" optional="YES" attributeType="String"/>
+        <attribute name="correo" optional="YES" attributeType="String"/>
+        <attribute name="imagen_logo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="usuario" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Proyectos" representedClassName="Proyectos" syncable="YES" codeGenerationType="class">
+        <attribute name="descripcion" optional="YES" attributeType="String"/>
+        <attribute name="fecha_limite" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="nombreProyecto" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Perfilesdatos" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Proyectos" positionX="-63" positionY="9" width="128" height="28"/>
+    </elements>
+</model>
