@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Mangas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Mangas</h1>
+    <table id="mangasTable">
+        <thead>
+            <tr>
+                <th>MangaId</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Las filas de datos se insertarán aquí -->
+        </tbody>
+    </table>
+
+    <script>
+        async function fetchMangas() {
+            try {
+                const response = await fetch('http://localhost:3000/api/manga');
+                const mangas = await response.json();
+                const tableBody = document.querySelector('#mangasTable tbody');
+                mangas.forEach(manga => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${manga.MangaId}</td>
+                        <td>${manga.name}</td>
+                        <td>${manga.price}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error fetching mangas:', error);
+            }
+        }
+
+        // Llamar a la función para obtener los mangas cuando se cargue la página
+        window.onload = fetchMangas;
+    </script>
+</body>
+</html>

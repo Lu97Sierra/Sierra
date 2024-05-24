@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Biblioteca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .message {
+            margin-top: 20px;
+            color: green;
+        }
+
+        .loading {
+            cursor: wait !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Actualizar Biblioteca</h1>
+    <form id="updateLibraryForm">
+        <label for="LibraryId">ID de la Biblioteca:</label>
+        <input type="number" id="LibraryId" name="LibraryId" required>
+        
+        <label for="newName">Nuevo Nombre:</label>
+        <input type="text" id="newName" name="newName" required>
+        
+        <button type="submit">Actualizar Biblioteca</button>
+    </form>
+
+    <div class="message" id="message"></div>
+
+    <script>
+        document.getElementById('updateLibraryForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const LibraryId = document.getElementById('LibraryId').value;
+            const newName = document.getElementById('newName').value;
+            const form = event.target;
+            const originalCursor = document.body.style.cursor;
+
+            // Cambiar el cursor a "espera"
+            document.body.style.cursor = 'wait';
+            form.classList.add('loading');
+
+            try {
+                const response = await fetch('http://localhost:3000/api/library', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ LibraryId, newName })
+                });
+
+                if (response.ok) {
+                    document.getElementById('message').textContent = 'Biblioteca actualizada con éxito!';
+                    document.getElementById('updateLibraryForm').reset();
+                } else {
+                    document.getElementById('message').textContent = 'Error al actualizar la biblioteca.';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('message').textContent = 'Error al actualizar la biblioteca.';
+            } finally {
+                // Restablecer el cursor a su estado original
+                document.body.style.cursor = originalCursor;
+                form.classList.remove('loading');
+            }
+        });
+    </script>
+</body>
+</html>

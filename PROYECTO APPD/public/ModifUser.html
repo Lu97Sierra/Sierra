@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .message {
+            margin-top: 20px;
+            color: green;
+        }
+
+        .loading {
+            cursor: wait !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Actualizar Usuario</h1>
+    <form id="updateUserForm">
+        <label for="id">ID de Usuario:</label>
+        <input type="text" id="id" name="id" required>
+        
+        <label for="password">Nueva Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Actualizar Usuario</button>
+    </form>
+
+    <div class="message" id="message"></div>
+
+    <script>
+        document.getElementById('updateUserForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const id = document.getElementById('id').value;
+            const password = document.getElementById('password').value;
+            const form = event.target;
+            const originalCursor = document.body.style.cursor;
+
+            // Cambiar el cursor a "espera"
+            document.body.style.cursor = 'wait';
+            form.classList.add('loading');
+
+            try {
+                const response = await fetch('http://localhost:3000/api/user', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ id, password })
+                });
+
+                if (response.ok) {
+                    document.getElementById('message').textContent = 'Usuario actualizado con éxito!';
+                    document.getElementById('updateUserForm').reset();
+                } else {
+                    document.getElementById('message').textContent = 'Error al actualizar el usuario.';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('message').textContent = 'Error al actualizar el usuario.';
+            } finally {
+                // Restablecer el cursor a su estado original
+                document.body.style.cursor = originalCursor;
+                form.classList.remove('loading');
+            }
+        });
+    </script>
+</body>
+</html>

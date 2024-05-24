@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Biblioteca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .message {
+            margin-top: 20px;
+            color: green;
+        }
+
+        .loading {
+            cursor: wait !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crear Biblioteca</h1>
+    <form id="createLibraryForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="mangas">Mangas (separados por comas):</label>
+        <textarea id="mangas" name="mangas" required></textarea>
+        
+        <button type="submit">Crear Biblioteca</button>
+    </form>
+
+    <div class="message" id="message"></div>
+
+    <script>
+        document.getElementById('createLibraryForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const mangas = document.getElementById('mangas').value.split(',').map(Number);
+            const form = event.target;
+            const originalCursor = document.body.style.cursor;
+
+            // Cambiar el cursor a "espera"
+            document.body.style.cursor = 'wait';
+            form.classList.add('loading');
+
+            try {
+                const response = await fetch('http://localhost:3000/api/library', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, mangas })
+                });
+
+                if (response.ok) {
+                    document.getElementById('message').textContent = 'Biblioteca creada con éxito!';
+                    document.getElementById('createLibraryForm').reset();
+                } else {
+                    document.getElementById('message').textContent = 'Error al crear la biblioteca.';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('message').textContent = 'Error al crear la biblioteca.';
+            } finally {
+                // Restablecer el cursor a su estado original
+                document.body.style.cursor = originalCursor;
+                form.classList.remove('loading');
+            }
+        });
+    </script>
+</body>
+</html>
